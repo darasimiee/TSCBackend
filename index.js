@@ -26,7 +26,7 @@ app.use((err, req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 7000
 
 connectToDB()
   .then(() => {
