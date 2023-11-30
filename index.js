@@ -17,7 +17,7 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v2/route", projectRouter);
 
 app.use((err, req, res) => {
-  const status = err.status || 500;
+  const status = err.status || 5000;
   const message = err.message || "Something went wrong";
   return res.status(status).json({
     success: false,
