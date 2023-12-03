@@ -4,6 +4,7 @@ import { config } from "dotenv";
 import { connectToDB } from "./config/mongodb.js";
 import authRoutes from "./routes/auth.js";
 import projectRouter from "./routes/projectRouter.js";
+import talentPostRoutes from "./routes/talentPost.js"
 
 const app = express();
 config();
@@ -15,6 +16,7 @@ app.disable("x-powered-by");
 //Endpoints
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v2/route", projectRouter);
+app.use("/api/v1/jobPost", talentPostRoutes);
 
 app.use((err, req, res) => {
   const status = err.status || 5000;
