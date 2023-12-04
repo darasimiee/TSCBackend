@@ -4,7 +4,7 @@ import {
   editJob,
   deleteJobs,
   getJobs,
-} from "../controllers/talentPost";
+} from "../controllers/talentPost.js";
 
 const router = express.Router();
 

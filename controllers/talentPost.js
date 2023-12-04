@@ -1,4 +1,4 @@
-import talentPost from "../models/talentPost";
+import talentPost from "../models/talentPost.js";
 import { customError } from "../config/error.js";
 
 //  Get all Jobs
