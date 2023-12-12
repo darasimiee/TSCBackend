@@ -9,8 +9,9 @@ import talentPostRoutes from "./routes/talentPost.js"
 const app = express();
 config();
 
-app.use(json());
 app.use(cors());
+app.use(json());
+
 app.disable("x-powered-by");
 
 //Endpoints

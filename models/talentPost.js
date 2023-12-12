@@ -14,7 +14,8 @@ const TalentPostSchema = mongoose.Schema({
   jobPosition: {
     type: String,
     required: true,
-    enum: ["Data Analysis", "Web Development", "Product Design"],
+    enum: ["Select position", "Data Analysis", "Web Development", "Product Design"],
+    default: "Select position",
   },
   experienceLevel: {
     type: String,
@@ -28,6 +29,7 @@ const TalentPostSchema = mongoose.Schema({
   jobDescription: {
     type: String,
     maxLength: [2000, "Job Description should be at most 2000 characters"],
+    required: true,
   },
   minimumQualification: {
     type: String,
@@ -35,16 +37,21 @@ const TalentPostSchema = mongoose.Schema({
       2000,
       "Minimum Qualification should be at most 2000 characters",
     ],
+    required: true,
   },
   newSkills: {
     type: [String],
+    required: true,
+
   },
   newTools: {
     type: [String],
+    required: false,
   },
   responsibilities: {
     type: String,
     maxLength: [2000, "Responsibilities should be at most 2000 characters"],
+    required: true
   },
   payRange: {
     type: String,
@@ -56,6 +63,7 @@ const TalentPostSchema = mongoose.Schema({
       "450,000 - 650,000",
       "650,000 - 750,000",
     ],
+    default: "150,000 - 250,000"
   },
   applicationDeadline: {
     type: String,
@@ -68,6 +76,7 @@ const TalentPostSchema = mongoose.Schema({
       "4 Months",
       "5 Months",
     ],
+    default: "2-3 Weeks"
   },
 });
 

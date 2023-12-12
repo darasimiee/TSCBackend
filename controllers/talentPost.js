@@ -18,7 +18,7 @@ export const getJobs = async (req, res) => {
 // Add jobPost
 export const createJob = async (req, res) => {
   try {
-    const { jobTitle, jobLocation, jobPosition, experienceLevel, payRange } =
+    const { jobTitle, jobLocation, jobPosition, experienceLevel, payRange, jobDescription, minimumQualification, newSkills, newTools } =
       req.body;
     console.log(
       req.jobTitle,
