@@ -40,9 +40,11 @@ const ProjectSchema = mongoose.Schema(
     },
     uploadImage: {
       type: [String],
+      required: false
     },
     uploadThumbnail: {
       type: [String],
+      required: false
     },
     comments: {
       type: String,
