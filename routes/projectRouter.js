@@ -13,7 +13,7 @@ const router = express.Router();
 // Apply verifyToken middleware to routes that require authentication
 router.get("/", verifyToken, getAllProject);
 
-router.post("/create", verifyToken, createProject);
+router.post("/create", createProject);
 
 router.patch("/:id", verifyToken, editProject);
 
