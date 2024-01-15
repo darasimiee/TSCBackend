@@ -16,13 +16,13 @@ const JobAlertsSchema = mongoose.Schema(
     companyName: {
       type: String,
       required: [true, "Company Name is required"],
-      minLenght: [3, "Company Name is too short"],
+      minLength: [3, "Company Name is too short"],
       maxLength: [30, "Company Name is too Long"],
     },
     keyRequirement: {
       type: String,
-      required: [true, "Company Name is required"],
-      minLenght: [3, "Key Requirement is too short"],
+      required: [true, "Key Requirement is required"],
+      minLength: [3, "Key Requirement is too short"],
       maxLength: [90, "Key Requirement is too Long"],
     },
     jobLink: {
@@ -35,15 +35,15 @@ const JobAlertsSchema = mongoose.Schema(
     },
     location: {
       type: String,
-      required: [true, "Company Name is required"],
-      minLenght: [3, "Company Name is too short"],
-      maxLength: [30, "Company Name is too Long"],
+      required: [true, "Location is required"],
+      minLength: [3, "Location is too short"],
+      maxLength: [30, "Location is too Long"],
     },
     jobType: {
       type: String,
       required: true,
-      enum: ["Select Job Type", "Remote", "On-Site", "Hybrid"],
-      default: "Select Job Type",
+      enum: ["Remote", "On-Site", "Hybrid"],
+      default: null, // Set an appropriate default value
     },
     jobDescription: {
       type: String,
