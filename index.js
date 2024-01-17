@@ -6,6 +6,7 @@ import authRoutes from "./routes/auth.js";
 import projectRouter from "./routes/projectRouter.js";
 import talentPostRoutes from "./routes/talentPost.js"
 import jobAlertRoutes from "./routes/jobAlertRoutes.js"
+import communityRoutes from "./routes/communityRoute.js"
 
 const app = express();
 config();
@@ -19,7 +20,8 @@ app.disable("x-powered-by");
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v2/route", projectRouter);
 app.use("/api/v1/jobPost", talentPostRoutes);
-app.use("/api/v1/jobalert",jobAlertRoutes )
+app.use("/api/v1/jobalert",jobAlertRoutes );
+app.use("api/v1/community", communityRoutes)
 
 app.use((err, req, res) => {
   const status = err.status || 5000;
